@@ -1,0 +1,371 @@
+﻿@page "/interface3"
+@using Almacen.Data.VModels
+<h3>interface 3</h3>
+@*<input type="button" onclick="showAlert('Hola')" value="Prueba de llamado JS" />*@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-primary">
+                <div class="card-header"><h3 class="card-title">Interfaz 3</h3></div>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-12">
+                            <div class="card card-primary card-tabs">
+                                <div class="card-header p-0 pt-1">
+                                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Tab 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Tab 2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Tab 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content" id="custom-tabs-one-tabContent">
+                                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Nombre</label>
+                                                        <div class="col-sm-11"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Razon Social : </label>
+                                                        <div class="col-sm-7"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">C:P</label>
+                                                        <div class="col-sm-3"><input type="text" class="form-control" id="Name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Ciudad : </label>
+                                                        <div class="col-sm-5"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Colonía : </label>
+                                                        <div class="col-sm-1"><input type="text" class="form-control" id="Name"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Giro</label>
+                                                        <div class="col-sm-3"><input type="text" class="form-control" id="Name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Estado : </label>
+                                                        <div class="col-sm-7"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">RFC : </label>
+                                                        <div class="col-sm-3"><input type="text" class="form-control" id="Name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Municipio : </label>
+                                                        <div class="col-sm-7"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">País : </label>
+                                                        <div class="col-sm-3"><input type="text" class="form-control" id="Name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Telefono : </label>
+                                                        <div class="col-sm-7"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                        <label for="inputEmail3" class="col-sm-1 col-form-label">Cod Auxiliar : </label>
+                                                        <div class="col-sm-3"><input type="text" class="form-control" id="Name"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Encargado de compras : </label>
+                                                        <div class="col-sm-8"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Encargado de pagos : </label>
+                                                        <div class="col-sm-8"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group row">
+                                                        <label for="inputEmail3" class="col-sm-3 col-form-label">Ecargado de recibir mercancia : </label>
+                                                        <div class="col-sm-8"><input type="text" class="form-control" id="nameCustomer"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label>Fecha  ultima de compra </label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label>Fecha ultima de pago</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label>Condición de Pago</label>
+                                                            <select class="custom-select">
+                                                                <option>option 1</option>
+                                                                <option>option 2</option>
+                                                                <option>option 3</option>
+                                                                <option>option 4</option>
+                                                                <option>option 5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="row">
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                                                                        <label for="customCheckbox1" class="custom-control-label">Factura</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
+                                                                        <label for="customCheckbox2" class="custom-control-label">Recibo</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Agente de Ventas </label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Zona</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Ruta</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Acumulado</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Limite de credito</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Saldo</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label>Plazo</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                                            <div class="row">
+                                                <label>Días de Entrega de documentos</label>
+                                            </div>
+                                            <div class="row">
+
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckboxLunes" value="Lunes">
+                                                            <label for="customCheckboxLunes" class="custom-control-label">Lunes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckboxMartes" value="customCheckboxMartes">
+                                                            <label for="customCheckboxMartes" class="custom-control-label">Martes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckboxMi" value="customCheckboxMi">
+                                                            <label for="customCheckboxMi" class="custom-control-label">Miercoles</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckboxJue" value="customCheckboxJue">
+                                                            <label for="customCheckboxJue" class="custom-control-label">Jueves</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckboxv" value="customCheckboxv">
+                                                            <label for="customCheckboxv" class="custom-control-label">Viernes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckSab" value="customCheckSab">
+                                                            <label for="customCheckSab" class="custom-control-label">Sabado</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="customCheckDom" value="customCheckDom">
+                                                            <label for="customCheckDom" class="custom-control-label">Domingo</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label>Día de pago</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="PayLunes" value="PayLunes">
+                                                            <label for="PayLunes" class="custom-control-label">Lunes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="Paymartes" value="Paymartes">
+                                                            <label for="Paymartes" class="custom-control-label">Martes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="PayMiercoles" value="PayMiercoles">
+                                                            <label for="PayMiercoles" class="custom-control-label">Miercoles</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="PayJueves" value="PayJueves">
+                                                            <label for="PayJueves" class="custom-control-label">Jueves</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="Payviernes" value="Payviernes">
+                                                            <label for="Payviernes" class="custom-control-label">Viernes</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="Paysabado" value="Paysabado">
+                                                            <label for="Paysabado" class="custom-control-label">Sabado</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1">
+                                                    <div class="form-group">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="paydomingo" value="paydomingo">
+                                                            <label for="paydomingo" class="custom-control-label">Domingo</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card -->
+                            </div>
+                            <div class="row mb-3">
+                                <a class="btn btn-app bg-info" id="floatSave">
+                                    <i class="fas fa-save"></i>Guardar
+                                </a>
+                                <a class="btn btn-app bg-danger" id="floatClose">
+                                    <i class="fas fa-window-close"></i> Cancelar
+                                </a>
+                                <a class="btn btn-app bg-warning" id="floatWarning">
+                                    <i class="fas fa-print"></i>Imprimir
+                                </a>
+                                <a class="btn btn-app bt-floar-loung" id="floatSalir">
+                                    <i class="fas fa-sign-out-alt"></i>Salir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<EditForm Model="vmData">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    @*clave
+    <input type="text" @bind="vmData.Clave" />
+
+    <input type="button" @onclick="Save" value="Guardar" />*@
+</EditForm>
+@code {
+    Cliente vmData = new Cliente();
+
+    protected override async Task OnInitializedAsync()
+    {
+        vmData.Clave = "895807";
+    }
+
+    protected void Save() { }
+    protected void Cancel() { }
+    protected void Print() { }
+    protected void Search() { }
+    protected void Close() { }
+
+}

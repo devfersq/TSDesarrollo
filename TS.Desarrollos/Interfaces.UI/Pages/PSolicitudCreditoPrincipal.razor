@@ -1,0 +1,33 @@
+﻿@page "/solicitudcredito"
+@using Almacen.Data.VModels
+
+<h3>PSolicitudCreditoPrincipal R1</h3>
+
+
+<PSolicitudCreditoCte modelo="@vmData"/>
+<PSolicitudCreditoCteAdi modelo="@vmData"/>
+<PSolicitudCreditoEmpleo modelo="@vmData" />
+<PSolicitudCreditoRefFamiliares modelo="@vmData"/>
+<PSolicitudCreditoInfoConyu modelo="@vmData"/>
+<PSolicitudCreditoProductos />
+<PSolicitudCreditoEvidenciasDocu />
+<PSolicitudCreditoEnganche />
+<PSolicitudCreditoPagares />
+<PSolicitudCreditoPagos />
+<PSolicitudCreditoRequisitios />
+@code {
+
+    public VMCredito vmData = new VMCredito();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        vmData.Folio = "509767";
+        vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
+        //vmData.Orden.Sucursal = "01";
+        //vmData.Orden.NombreSucursal = "Sucursal Centro Veracruz";
+        //vmData.Orden.Impreso = false;
+        //vmData.Orden.Origen = "01";
+        //vmData.Orden.NombreOrigen = "Bodega princial del centro";
+    }
+}

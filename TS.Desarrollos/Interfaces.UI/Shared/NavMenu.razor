@@ -1,0 +1,78 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">Interfaces.UI</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div  @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface1">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 1
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface2">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 2
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface3">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 3
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface4">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 4
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface5">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 5
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface6">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 6
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface7">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 7
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="interface8">
+                <span class="oi oi-plus" aria-hidden="true"></span> Iterface 8
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="panelcreditos">
+                <span class="oi oi-plus" aria-hidden="true"></span> panel creditos
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="solicitudcredito">
+                <span class="oi oi-plus" aria-hidden="true"></span> Solicitud Credito
+            </NavLink>
+        </li>
+
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

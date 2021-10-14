@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Almacen.Data", "Almacen.Data\Almacen.Data.csproj", "{C2DA252F-8586-4065-9D59-CA34BB099378}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces.UI", "Interfaces.UI\Interfaces.UI.csproj", "{5BAFE135-3897-48D8-8E0D-A338468C1C91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2DA252F-8586-4065-9D59-CA34BB099378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DA252F-8586-4065-9D59-CA34BB099378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DA252F-8586-4065-9D59-CA34BB099378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DA252F-8586-4065-9D59-CA34BB099378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAFE135-3897-48D8-8E0D-A338468C1C91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAFE135-3897-48D8-8E0D-A338468C1C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAFE135-3897-48D8-8E0D-A338468C1C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAFE135-3897-48D8-8E0D-A338468C1C91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C63BE56-4AEA-4036-A975-F863287192F0}
+	EndGlobalSection
+EndGlobal

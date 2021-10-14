@@ -1,0 +1,10 @@
+﻿<h3>PSolicitudCreditoCte R2</h3>
+@using Almacen.Data.VModels
+ 
+<label>Nombre de cliente</label>
+<input type="text" @bind="modelo.ClienteNombre" />
+@code {
+    [Parameter]
+    public VMCredito modelo { get; set; }
+
+}

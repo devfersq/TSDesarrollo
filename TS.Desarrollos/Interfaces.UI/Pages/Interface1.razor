@@ -1,0 +1,272 @@
+﻿@page "/interface1"
+@using Almacen.Data.VModels
+<h3>interface 1</h3>
+@*<input type="button" onclick="showAlert('Hola')" value="Prueba de llamado JS" />*@
+<EditForm Model="vmData">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    @*Folio Ruta
+    <input type="text" @bind="vmData.Traspaso.Folio" />
+    @foreach (var item in vmData.Items)
+    {
+
+        <p>Folio Orden</p>
+        <input type="text" @bind="item.NombreProducto" />
+    }*@
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Interfaz 1</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-9 mb-3">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="folio">Fólio</label>
+                                            <input type="text" class="form-control" id="folio" placeholder=""  @bind="vmData.Traspaso.Folio" required="">
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="almacenorg">Almacen de origen</label>
+                                            <input type="text" class="form-control" id="almacenorg" placeholder="" @bind="vmData.Traspaso.AlmacenOrigen" required="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="almacedes">Almacen Destino</label>
+                                            <input type="text" class="form-control" id="almacedes" placeholder="" @bind="vmData.Traspaso.AlmacenDestino" required="">
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="date">Fecha</label>
+                                            <input type="date" class="form-control" id="date" placeholder="" @bind="vmData.Traspaso.Fecha" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="remitente">Remitente</label>
+                                    <input type="text" class="form-control" id="remitente" placeholder="" @bind="vmData.Traspaso.Remitente" required="">
+                                </div>
+                                <div class="col-md-9 mb-3">
+                                    <label for="observaciones">Observaciones</label>
+                                    <input type="text" class="form-control" id="observaciones" placeholder="" @bind="vmData.Traspaso.Observaciones" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="receptor">Receptor</label>
+                                    <input type="text" class="form-control" id="receptor" placeholder="" @bind="vmData.Traspaso.Receptor" required="">
+                                </div>
+                                <div class="col-md-9 mb-3">
+                                    <label for="transportador">Transportador</label>
+                                    <input type="text" class="form-control" id="transportador" placeholder="" @bind="vmData.Traspaso.Transportador" required="">
+                                </div>
+                            </div>
+                            <div class="row tables-content">
+                                <div class="col-md-10 mb-3">
+                                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                        <table id="table-1" class="table table-bordered table-hover" >
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Producto</th>
+                                                    <th>Descripción</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Unidad</th>
+                                                    <th>Costo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Producto</th>
+                                                    <th>Descripción</th>
+                                                    <th>Cantidad</th>
+                                                    <th>Unidad</th>
+                                                    <th>Costo</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3 export-controls">
+                                    <p>Usar Dispositivo removible</p>
+                                    <a class="btn btn-app">
+                                        <i class="fas fa-file-export"></i> Exportar
+                                    </a>
+
+                                    <a class="btn btn-app">
+                                        <i class="fas fa-file-import"></i> Importar
+                                    </a>
+
+                                    <a class="btn btn-app">
+                                        <i class="fas fa-file-archive"></i>Importar APP
+                                    </a>
+
+                                    <a class="btn btn-app">
+                                        <i class="fas fa-file-pdf"></i> Importar Entrada
+                                    </a>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row mb-3">
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Costo Total:</label></div>
+                                        <div class="col-md-5"><input type="text" class="form-control"></div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-md-4"><label>Total de productos:</label></div>
+                                        <div class="col-md-5"><input type="text" class="form-control"></div>
+                                    </div>
+                                   
+                                </div>
+                                        <a class="btn btn-app bg-info float-save" id="floatSave">
+                                            <i class="fas fa-save"></i>Guardar
+                                        </a>
+                                        <a class="btn btn-app bg-danger bt-floar-close" id="floatClose">
+                                            <i class="fas fa-window-close"></i> Cancelar
+                                        </a>
+                                        <a class="btn btn-app bg-warning bt-float-warning" id="floatWarning">
+                                            <i class="fas fa-print"></i>Imprimir
+                                        </a>
+                                        <a class="btn btn-app bt-floar-loung" id="floatSalir">
+                                            <i class="fas fa-sign-out-alt"></i>Salir
+                                        </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<input type="button" @onclick="Save" value="Guardar" />*@
+</EditForm>
+@code {
+    VMTraspasos vmData = new VMTraspasos();
+
+    protected override async Task OnInitializedAsync()
+    {
+        vmData.Traspaso.Folio = 556807;
+        vmData.Traspaso.AlmacenOrigen = 45646;
+        vmData.Traspaso.AlmacenDestino = 45646;
+        
+    }
+
+    protected void Save() { }
+    protected void Cancel() { }
+    protected void Print() { }
+    protected void Search() { }
+    protected void Close() { }
+
+}

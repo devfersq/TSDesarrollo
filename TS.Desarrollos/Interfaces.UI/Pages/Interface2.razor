@@ -1,0 +1,697 @@
+﻿@page "/interface2"
+@using Almacen.Data.VModels
+<h3>interface 2</h3>
+@*<input type="button" onclick="showAlert('Hola')" value="Prueba de llamado JS" />*@
+<EditForm Model="vmData">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Interfaz 2</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-9 mb-3">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="folio">Fólio</label>
+                                            <input type="text" class="form-control" id="folio" placeholder="" @bind="vmData.Compra.Folio" required="">
+                                        </div>
+                                        <div class="col-md-9 mb-3">
+                                            <label for="almacenorg">Almacén</label>
+                                            <input type="text" class="form-control" id="almacenorg" placeholder="" @bind="vmData.Compra.Almacen" required="">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <label for="almacedes">Proveedor</label>
+                                            <input type="text" class="form-control" id="Proveedor" placeholder="" @bind="vmData.Compra.Proveedor" required="">
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="date">Fecha/Rem </label>
+                                            <input type="text" class="form-control" id="date" placeholder="" @bind="vmData.Compra.Fecha" required="">
+                                        </div>
+                                        <div class="col-md-3 mb-3 control-tools">
+                                            <div>
+                                                <a>
+                                                    <i class="fas fa-plus-circle"></i> Añadir
+                                                </a>
+                                                <a>
+                                                    <i class="fas fa-file-export"></i> Pedido
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label>Observaciones</label>
+                                                <textarea class="form-control" rows="3" @bind="vmData.Compra.Observacion"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-1 mb-3">
+                                    <label for="remitente">Desc%</label>
+                                    <input type="text" class="form-control" id="Descuento" placeholder="" @bind="vmData.Compra.Descuento" required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="observaciones">Flete</label>
+                                    <input type="text" class="form-control" id="Flete" placeholder="" @bind="vmData.Compra.Flete" required="">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="observaciones">Distribuir flete </label>
+                                    <div class="row radio-ctr">
+                                        <div class="col-sm-6">
+                                            <!-- checkbox -->
+                                            <div class="form-group">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
+                                                    <label for="customRadio1" class="custom-control-label">Costo</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <!-- radio -->
+                                            <div class="form-group">
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="customRadio2" name="customRadio2">
+                                                    <label for="customRadio2" class="custom-control-label">Sin costo</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="date">Fecha</label>
+                                    <input type="date" class="form-control" id="observaciones" @bind="vmData.Compra.Fecha" required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="divis">Divisa</label>
+                                    <input type="text" class="form-control" id="divis" placeholder="" @bind="vmData.Compra.Divisa" required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="tc">T.C</label>
+                                    <input type="text" class="form-control" id="tc" placeholder="" @bind="vmData.Compra.TipoDeCambio" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="receptor">Receptor</label>
+                                    <input type="text" class="form-control" id="receptor" placeholder=""  required="">
+                                </div>
+                                <div class="col-md-9 mb-3">
+                                    <label for="transportador">Transportador</label>
+                                    <input type="text" class="form-control" id="transportador" placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-12 col-sm-12">
+                                    <div class="card card-primary card-outline card-tabs">
+                                        <div class="card-header p-0 pt-1 border-bottom-0">
+                                            <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="false">Pagina 1</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">Pagina 2</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Pagina 3</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " id="custom-tabs-three-settings-tab" data-toggle="pill" href="#custom-tabs-three-settings" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="true">Pagina 4</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content" id="custom-tabs-three-tabContent">
+                                                <div class="tab-pane fade active show" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                                        <table id="table-1" class="table table-bordered table-hover">
+                                                            <thead class="thead-dark">
+                                                                <tr>
+                                                                    <th>Producto</th>
+                                                                    <th>Descripción</th>
+                                                                    <th>Cantidad</th>
+                                                                    <th>Unidad</th>
+                                                                    <th>Costo</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Trident</td>
+                                                                    <td>
+                                                                        Internet
+                                                                        Explorer 4.0
+                                                                    </td>
+                                                                    <td>Win 95+</td>
+                                                                    <td> 4</td>
+                                                                    <td>X</td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th>Producto</th>
+                                                                    <th>Descripción</th>
+                                                                    <th>Cantidad</th>
+                                                                    <th>Unidad</th>
+                                                                    <th>Costo</th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                                                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                                            <table id="table-1" class="table table-bordered table-hover">
+                                                                <thead class="thead-dark">
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                                            <table id="table-1" class="table table-bordered table-hover">
+                                                                <thead class="thead-dark">
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="custom-tabs-three-settings" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                                                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                                            <table id="table-1" class="table table-bordered table-hover">
+                                                                <thead class="thead-dark">
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Trident</td>
+                                                                        <td>
+                                                                            Internet
+                                                                            Explorer 4.0
+                                                                        </td>
+                                                                        <td>Win 95+</td>
+                                                                        <td> 4</td>
+                                                                        <td>X</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>Producto</th>
+                                                                        <th>Descripción</th>
+                                                                        <th>Cantidad</th>
+                                                                        <th>Unidad</th>
+                                                                        <th>Costo</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <!-- /.card -->
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-1 mb-3">
+                                    <label for="remitente">Costo</label>
+                                    <input type="text" class="form-control" id="remitente" placeholder=""   required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="observaciones">Descuentos</label>
+                                    <input type="text" class="form-control" id="observaciones" placeholder=""  @bind="vmData.Compra.Descuento" required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="divis">Iva</label>
+                                    <input type="text" class="form-control" id="divis" placeholder=""   required="">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label for="tc">Total</label>
+                                    <input type="text" class="form-control" id="tc" placeholder=""  required="">
+                                </div>
+                            </div>
+
+                                        <a class="btn btn-app bg-info" id="floatSave">
+                                            <i class="fas fa-save"></i>Guardar
+                                        </a>
+                                        <a class="btn btn-app bg-danger"  id="floatClose">
+                                            <i class="fas fa-window-close"></i> Cancelar
+                                        </a>
+                                        <a class="btn btn-app bg-warning" id="floatWarning">
+                                            <i class="fas fa-print"></i>Imprimir
+                                        </a>
+                                        <a class="btn btn-app bt-floar-loung" id="floatSalir">
+                                            <i class="fas fa-sign-out-alt"></i>Salir
+                                        </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</EditForm>
+@code {
+    VMCompras vmData = new VMCompras();
+
+    protected override async Task OnInitializedAsync()
+    {
+        vmData.Compra.Folio = 556807;
+    }
+
+    protected void Save() { }
+    protected void Cancel() { }
+    protected void Print() { }
+    protected void Search() { }
+    protected void Close() { }
+
+}

@@ -1,0 +1,292 @@
+﻿@page "/interface8"
+@using Almacen.Data.VModels
+@*<h3>interface 8</h3>
+<input type="button" onclick="showAlert('Hola')" value="Prueba de llamado JS"/>*@
+<EditForm Model="vmData">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    @*Folio
+        <input type="text" @bind="vmData.Orden.Folio"/>
+        @foreach(var item in vmData.Items)
+          {
+
+              <p>Producto</p>
+              <input type="text" @bind="item.Producto"/>
+          }*@
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Interfaz 8</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-9 mb-3">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <label>Folio</label>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="input-group ">
+                                                <input type="text" class="form-control" placeholder="Buscar por Folio" @bind="vmData.Orden.Folio">
+                                                <span class="input-group-append">
+                                                    <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <!-- select -->
+                                            <div class="form-group">
+                                                <label>Tipo</label>
+                                                <input type="text" class="form-control" placeholder="Buscar por Folio" @bind="vmData.Orden.Tipo">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label>Sucursal</label>
+                                                <input type="text" class="form-control" placeholder="Buscar por Folio" @bind="vmData.Orden.Sucursal">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Origen</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" @bind="vmData.Orden.Origen">
+                                        <span class="input-group-append">
+                                            <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-3">
+                                    <label>Monto a Pagar</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label>Entrega</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" @bind="vmData.Orden.Destino">
+                                        <span class="input-group-append">
+                                            <button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Pagar en la entrada</label>
+                                        <div class="col-sm-5 check-aling">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="inputEmail3" class="col-sm-4 col-form-label">Imprimir</label>
+                                        <div class="col-sm-5 check-aling">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label>Observaciones</label>
+                                        <textarea class="form-control" rows="3" placeholder="Enter ..." @bind="vmData.Orden.Observaciones"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-6 mb-3">
+                                    <h4>Productos</h4>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <a class="add-producto">
+                                        Agregar <i class="fas fa-plus-circle"></i>
+                                    </a>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                        <table id="table-1" class="table table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th>Clave</th>
+                                                    <th>Nombre</th>
+                                                    <th>Cantidad</th>
+                                                    <th>A</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>
+                                                        Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td>Win 95+</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            <br />
+                            <a class="btn btn-app bg-info" id="floatSave">
+                                <i class="fas fa-save"></i>Guardar
+                            </a>
+                            <a class="btn btn-app bg-danger" id="floatClose">
+                                <i class="fas fa-window-close"></i> Cancelar
+                            </a>
+                            <a class="btn btn-app bg-warning" id="floatWarning">
+                                <i class="fas fa-print"></i>Imprimir
+                            </a>
+                            <a class="btn btn-app bg-secondary" id="floatEntrega">
+                                <i class="fas fa-shipping-fast"></i>Entregar
+                            </a>
+                            <a class="btn btn-app" id="floatSalirf">
+                                <i class="fas fa-sign-out-alt"></i>Salir
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</EditForm>
+@code {
+	VMOrdenDeEntregas vmData = new VMOrdenDeEntregas();
+
+	protected override async Task OnInitializedAsync()
+    {
+		vmData.Orden.Folio = 509767;
+		vmData.Orden.Tipo = "FA";
+		vmData.Orden.Sucursal = "01";
+		vmData.Orden.NombreSucursal = "Sucursal Centro Veracruz";
+		vmData.Orden.Impreso = false;
+		vmData.Orden.PagoEntrega = true;
+		vmData.Orden.MontoAcobrar = 3500;
+		vmData.Orden.Origen = "01";
+		vmData.Orden.NombreOrigen = "Bodega Principal del Norte";
+		vmData.Orden.Observaciones = "Se va por mercancia por que se encuentra dañada. Se colecta para reparar daño y regesarla en 15 dias";
+		vmData.Domicilio.Nombre = "Juan Manuel Rosas Perez";
+		vmData.Domicilio.Direccion = "Calle de insurgentes colonia del centro de Mexico";
+		vmData.Domicilio.Telefono = "8989562398";
+		vmData.Domicilio.Referencia = "Casa de color verde porton blanco de aluminio.Entrar por la tienda fofel doblar a la izquierda y coninuar 10 cuadras";
+
+		vmData.Items = new List<VMOrdenProducto>(){
+			new VMOrdenProducto() { Producto = "BIC28INOX", NombreProducto = "Bicicleta Rodada 28 con rines de acero inox", Cantidad = 2},
+			new VMOrdenProducto() { Producto = "BIC26INOX", NombreProducto = "Bicicleta Rodada 26 con rines de acero inox", Cantidad = 1 },
+			new VMOrdenProducto() { Producto = "BIC20INOX", NombreProducto = "Bicicleta Rodada 20 con rines de acero inox", Cantidad = 2 }
+		};
+
+    }
+
+	protected void Save(){ }
+	protected void Cancel(){ }
+	protected void Print(){ }
+	protected void Search(){ }
+	protected void Delivered(){ }
+
+}
