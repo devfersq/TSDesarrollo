@@ -1,10 +1,13 @@
-﻿using Interfaces.UI.Data;
+﻿using Interfaces.UI.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Interfaces.UI
 {
@@ -23,9 +26,17 @@ namespace Interfaces.UI
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-
-            services.AddDbContext<InterfacesUIContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("InterfacesUIContext")));
+            services.AddMvc();
+            services.AddOptions();
+            services.AddTransient<IQueriesRepository, QueriesRepository>();
+            //services.AddPersistence(Configuration);
+            services.Configure<AppDBConnection>(options =>
+            {
+                options.SqlServerConnection = Configuration.GetConnectionString("InterfacesUIContext");
+            });
+            //services.AddDbContext<DataAccessContext>(options =>
+            //     options.UseSqlServer(Configuration.GetConnectionString("InterfacesUIContext"))
+            //);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +62,10 @@ namespace Interfaces.UI
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action}/{id?}"
+                    );
             });
         }
     }
