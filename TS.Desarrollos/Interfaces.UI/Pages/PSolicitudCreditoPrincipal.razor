@@ -4,897 +4,233 @@
 <h3>PSolicitudCreditoPrincipal R1</h3>
 
 
-<PSolicitudCreditoCte modelo="@vmData" />
-<PSolicitudCreditoCteAdi modelo="@vmData" />
-<PSolicitudCreditoEmpleo modelo="@vmData" />
-<PSolicitudCreditoRefFamiliares modelo="@vmData" />
-<PSolicitudCreditoInfoConyu modelo="@vmData" />
-<PSolicitudCreditoProductos />
-<PSolicitudCreditoEvidenciasDocu />
-<PSolicitudCreditoEnganche />
-<PSolicitudCreditoPagares />
-<PSolicitudCreditoPagos />
-<PSolicitudCreditoRequisitios />
+@*<PSolicitudCreditoCte modelo="@vmData" />*@
+@*<PSolicitudCreditoCteAdi modelo="@vmData" />*@
+@*<PSolicitudCreditoEmpleo modelo="@vmData" />*@
+@*<PSolicitudCreditoRefFamiliares modelo="@vmData" />*@
+@*<PSolicitudCreditoInfoConyu modelo="@vmData" />*@
+@*<PSolicitudCreditoProductos />*@
+@*<PSolicitudCreditoEvidenciasDocu />*@
+@*<PSolicitudCreditoEnganche />*@
+@*<PSolicitudCreditoPagares />*@
+@*<PSolicitudCreditoPagos />*@
+@*<PSolicitudCreditoRequisitios />*@
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="vert-tabs-home-tabt" data-toggle="pill" href="#vert-tabs-homet" role="tab" aria-controls="vert-tabs-homet" aria-selected="false">PSolicitudCreditoPrincipal R1</a>
+            <a class="nav-link" id="vert-tabs-home-tab" data-toggle="pill" href="#vert-tabs-home" role="tab" aria-controls="vert-tabs-home" aria-selected="false">PSolicitudCreditoCte</a>
+            <a class="nav-link" id="vert-tabs-profile-tab" data-toggle="pill" href="#vert-tabs-profile" role="tab" aria-controls="vert-tabs-profile" aria-selected="false">PSolicitudCreditoCteAdi</a>
+            <a class="nav-link" id="vert-tabs-messages-tab" data-toggle="pill" href="#vert-tabs-messages" role="tab" aria-controls="vert-tabs-messages" aria-selected="false">PSolicitudCreditoEmpleo</a>
+            <a class="nav-link" id="vert-tabs-settings-tab" data-toggle="pill" href="#vert-tabs-settings" role="tab" aria-controls="vert-tabs-settings" aria-selected="false">PSolicitudCreditoRefFamiliares</a>
+            <a class="nav-link" id="vert-tabs-settings-tabs" data-toggle="pill" href="#vert-tabs-settingss" role="tab" aria-controls="vert-tabs-settingss" aria-selected="false">PSolicitudCreditoInfoConyu</a>
+            <a class="nav-link" id="vert-tabs-settingx-tabs" data-toggle="pill" href="#vert-tabs-settingsx" role="tab" aria-controls="vert-tabs-settingsx" aria-selected="false">PSolicitudCreditoProductos</a>
+            <a class="nav-link" id="vert-tabs-settingg-tabs" data-toggle="pill" href="#vert-tabs-settingsg" role="tab" aria-controls="vert-tabs-settingsg" aria-selected="false">PSolicitudCreditoEvidenciasDocu</a>
+            <a class="nav-link" id="vert-tabs-settingd-tabs" data-toggle="pill" href="#vert-tabs-settingsd" role="tab" aria-controls="vert-tabs-settingsd" aria-selected="false">PSolicitudCreditoEnganche</a>
+            <a class="nav-link" id="vert-tabs-settingp-tabs" data-toggle="pill" href="#vert-tabs-settingsp" role="tab" aria-controls="vert-tabs-settingsp" aria-selected="false">PSolicitudCreditoPagares</a>
+            <a class="nav-link" id="vert-tabs-settingk-tabs" data-toggle="pill" href="#vert-tabs-settingsk" role="tab" aria-controls="vert-tabs-settingsk" aria-selected="false">PSolicitudCreditoPagos</a>
+            <a class="nav-link" id="vert-tabs-settingu-tabs" data-toggle="pill" href="#vert-tabs-settingsu" role="tab" aria-controls="vert-tabs-settingsu" aria-selected="false">PSolicitudCreditoRequisitios</a>
+        </div>
+    </div>
+    <div class="col-7 col-sm-9">
+        <div class="tab-content" id="vert-tabs-tabContent">
+            <div class="tab-pane text-left fade" id="vert-tabs-homet" role="tabpanel" aria-labelledby="vert-tabs-home-tabt">
+
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Credito</h3>
+                    </div>
+                    <div class="card-body">
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="card-title">Interfaz 2</h3>
-                </div>
-                <div class="card-body">
-                    <div class="boder-iv m-3">
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-1 col-form-label">Credito</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
+                        <!--!--><div class="form-group row">
                             <label for="Folio" class="col-sm-1 col-form-label">Folio</label>
                             <div class="col-sm-5">
                                 <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="Buscar por Folio"><!--!-->
-                                    <!--!--><span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                    <input type="text" class="form-control" placeholder="Buscar por Folio">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!--!--><div class="form-group row">
                             <label for="Folio" class="col-sm-1 col-form-label">Sucursal</label>
                             <div class="col-sm-5">
                                 <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="Buscar por Folio"><!--!-->
-                                    <!--!--><span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                    <input type="text" class="form-control" placeholder="Buscar por Folio">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
                                 </div>
                             </div>
                             <label for="Folio" class="col-sm-1 col-form-label">Enganche</label>
-                            <div class="col-sm-5">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
+                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
                         </div>
                         <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Plazo</label>
-                            <div class="col-sm-2">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control"><!--!-->
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Forma de Pago</label>
+                            <!--!--><label for="Folio" class="col-sm-1 col-form-label">Plazo</label>
+                            <!--!--><div class="col-sm-2"><div class="input-group "><input type="text" class="form-control"></div></div>
+                            <!--!--><label for="Folio" class="col-sm-2 col-form-label">Forma de Pago</label>
                             <div class="col-sm-3">
                                 <div class="input-group ">
                                     <select class="form-control">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
+                                        <option>option 1</option><!--!-->
+                                        <option>option 2</option><!--!-->
+                                        <option>option 3</option><!--!-->
+                                        <option>option 4</option><!--!-->
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div><!--!-->
+                            <!--!--><label for="Folio" class="col-sm-1 col-form-label">Grupo</label>
+                            <div class="col-sm-3">
+                                <div class="input-group ">
+                                    <select class="form-control">
+                                        <option>option 1</option><!--!-->
+                                        <option>option 2</option><!--!-->
+                                        <option>option 3</option><!--!-->
+                                        <option>option 4</option><!--!-->
                                         <option>option 5</option>
                                     </select>
                                 </div>
                             </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">Grupo</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <select class="form-control">
-                                        <option>option 1</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
+                        </div><!--!-->
+                        <!--!--><div class="form-group row">
                             <label for="Folio" class="col-sm-1 col-form-label">Fecha</label>
-                            <div class="col-sm-5">
-                                <div class="input-group ">
-                                    <input type="date" class="form-control"><!--!-->
-                                </div>
-                            </div>
+                            <div class="col-sm-5"><div class="input-group "><input type="date" class="form-control"></div></div>
                             <label for="Folio" class="col-sm-1 col-form-label">Vendedor</label>
                             <div class="col-sm-5">
                                 <div class="input-group ">
-                                    <input type="text" class="form-control"><!--!-->
-                                    <!--!--><span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-group row">
+                            <a class="btn btn-app bg-info">
+                                <i class="fas fa-search"></i>Buscar
+                            </a>
+
                         </div>
                     </div>
-
-                    <div class="boder-iv m-3">
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Datos del Cliente</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Cliente</label>
-                            <div class="col-sm-5">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="Buscar por Folio"><!--!-->
-                                    <!--!--><span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Nombre</label>
-                            <div class="col-sm-7">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">RFC</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Dirección</label>
-                            <div class="col-sm-7">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">No .Ext</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Colonia</label>
-                            <div class="col-sm-7">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">C.P</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Ciudad</label>
-                            <div class="col-sm-7">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">Estado</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Teléfono</label>
-                            <div class="col-sm-7">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label for="Folio" class="col-sm-1 col-form-label">Correo</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="tab-pane text-left fade" id="vert-tabs-home" role="tabpanel" aria-labelledby="vert-tabs-home-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Datos de Cliente</h3>
                     </div>
-                    <div class="boder-iv  m-3">
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Adiccionales De Cliente</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Entre Calles</label>
-                            <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Años de residencia</label>
-                            <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <br />
-                                <div class="form-group clearfix">
-
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Casa propia
-                                        </label>
-                                    </div>
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Casa en Renta
-                                        </label>
-                                    </div>
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Vive con padre
-                                        </label>
-                                    </div>
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Otros
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Teléfono Fijo Casa</label>
-                                    <input type="text" class="form-control" id="" placeholder="Enter email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Renta Mensual</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="date" class="form-control"></div></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Estado civil</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Teléfono Celular</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Dependientes</label>
-                            <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoCte modelo="@vmData" />
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Información de Empleo</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Nombre Empresa</label>
-                            <div class="col-sm-5">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control"><!--!-->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Puesto</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-2 col-form-label">Antigûedad</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Teléfono Fijo</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-1 col-form-label">Ext</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Domicilio</label>
-                            <div class="col-sm-8">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Colonia</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-1 col-form-label">Ciudad</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-1 col-form-label">Estado</label>
-                            <div class="col-sm-4">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-1 col-form-label">C:P</label>
-                            <div class="col-sm-2">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <h3>Fuentes de ingresos (comprobables)</h3>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Ingreso Mensual</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-2 col-form-label">Otros Ingresos</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Empresa anterior</label>
-                            <div class="col-sm-8"><input type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Teléfono</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <label class="col-sm-2 col-form-label">Antiguedad</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vert-tabs-profile" role="tabpanel" aria-labelledby="vert-tabs-profile-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Adiccionales De Cliente</h3>
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h4>Referencias Familiares</h4>
-                        <small>"Que no vivan con usted"</small>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Domicilio</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Parentesco</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label class="col-sm-1 col-form-label">Teléfono</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3"></div>
-                            <div class="col-md-6 mb-3">
-                                <a class="add-producto">
-                                    Agregar <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Parentesco</th>
-                                                <th>Domicilio</th>
-                                                <th>Teléfono</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoCteAdi modelo="@vmData" />
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h3>Informacion esposa u oblidado Solidario </h3>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Edad</label>
-                            <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-1 col-form-label">Trabaja</label>
-                            <div class="form-group clearfix">
-                                <div class="icheck-primary d-inline">
-                                    <input type="checkbox" id="checkboxPrimary1" checked="">
-                                    <label for="checkboxPrimary1">
-                                    </label>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Empresa</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Domicilio</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Puesta</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Antiguedad</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Codigo Postal</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Colonia</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Ciudad</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Estado</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Teléfono fijo</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
-                        <small>Fuentes de ingresos comprobables (Commprobables)</small>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Ingreso Mensual</label>
-                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Otros Ingresos</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
-                        </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vert-tabs-messages" role="tabpanel" aria-labelledby="vert-tabs-messages-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Información de Empleo</h3>
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h3>Productos </h3>
-                        <div class="form-group row">
-                            <label for="Folio" class="col-sm-2 col-form-label">Producto</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <label for="Folio" class="col-sm-2 col-form-label">Cantidad</label>
-                            <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3"><h4>Productos</h4></div>
-                            <div class="col-md-6 mb-3">
-                                <a class="add-producto">
-                                    Agregar <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>Producto</th>
-                                                <th>Nombre</th>
-                                                <th>Cantidad</th>
-                                                <th>Presio</th>
-                                                <th>%Desc</th>
-                                                <th>%Importe</th>
-                                                <th>A</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="card-body">
+                        <PSolicitudCreditoEmpleo modelo="@vmData" />
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h3>Pagares</h3>
-                        <div class="row ">
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>No Pagare</th>
-                                                <th>Fecha</th>
-                                                <th>Cargo</th>
-                                                <th>Estado</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td>
-                                                    Internet
-                                                    Explorer 4.0
-                                                </td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settings" role="tabpanel" aria-labelledby="vert-tabs-settings-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Referencias Familiares</h3>
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h3>Pagares </h3>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3"></div>
-                            <div class="col-md-6 mb-3">
-                                <a class="add-producto">
-                                    Agregar <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>No Pagare</th>
-                                                <th>Fecha Pago</th>
-                                                <th>Capital</th>
-                                                <th>Intereces</th>
-                                                <th>Cobranza</th>
-                                                <th>Tipo Pago Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td> Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                                <td>Win 95+</td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Eliminar">
-                                                            <i class="far fa-trash-alt"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Editar">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoRefFamiliares modelo="@vmData" />
                     </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingss" role="tabpanel" aria-labelledby="vert-tabs-settingss-tab">
 
-                    <div class="boder-iv  m-3">
-                        <h3>Pagares </h3>
-                        <div class="form-group row">
-                            <!--!--><label for="Monto" class="col-sm-1 col-form-label">Monto</label>
-                            <!--!--><div class="col-sm-2"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <!--!--><label for="Folio" class="col-sm-2 col-form-label">Tipo de Pago</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <select class="form-control">
-                                        <option>option 1</option><!--!-->
-                                        <option>option 2</option><!--!-->
-                                        <option>option 3</option><!--!-->
-                                        <option>option 4</option><!--!-->
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div><!--!-->
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-plus-square"></i>Agregar</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3"></div>
-                            <div class="col-md-6 mb-3">
-                                <a class="add-producto">
-                                    Agregar <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>Fecha</th>
-                                                <th>Monto</th>
-                                                <th>Tipo de Pago</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td> Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Imprimir">
-                                                            <i class="fas fa-print"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Devoluciones">
-                                                            <i class="fas fa-arrow-alt-circle-left"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Eliminar">
-                                                            <i class="fas fa-trash"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Informacion esposa u oblidado Solidario</h3>
                     </div>
-
-                    <div class="boder-iv  m-3">
-                        <h3>Pagares </h3>
-                        <div class="form-group row">
-                            <!--!--><label for="Monto" class="col-sm-1 col-form-label">Monto</label>
-                            <!--!--><div class="col-sm-2"><div class="input-group "><input type="text" class="form-control"></div></div>
-                            <!--!--><label for="Folio" class="col-sm-2 col-form-label">Tipo de Pago</label>
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <select class="form-control">
-                                        <option>option 1</option><!--!-->
-                                        <option>option 2</option><!--!-->
-                                        <option>option 3</option><!--!-->
-                                        <option>option 4</option><!--!-->
-                                        <option>option 5</option>
-                                    </select>
-                                </div>
-                            </div><!--!-->
-                            <div class="col-sm-3">
-                                <div class="input-group ">
-                                    <a href="#" class="btn btn-primary"><i class="fa fa-plus-square"></i>Agregar</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3"></div>
-                            <div class="col-md-6 mb-3">
-                                <a class="add-producto">
-                                    Enganche <i class="fas fa-plus-circle"></i>
-                                </a>
-                            </div>
-                            <div class="col-md-12 mb-3">
-                                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                                    <table id="table-1" class="table table-bordered table-hover">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th>Fecha</th>
-                                                <th>Monto</th>
-                                                <th>Tipo de Pago</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Trident</td>
-                                                <td> Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Imprimir">
-                                                            <i class="fas fa-print"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Devoluciones">
-                                                            <i class="fas fa-arrow-alt-circle-left"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-default btn-sm" data-container="body" title="Eliminar">
-                                                            <i class="fas fa-trash"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoInfoConyu modelo="@vmData" />
                     </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsx" role="tabpanel" aria-labelledby="vert-tabs-settingsx-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Productos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoProductos />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsg" role="tabpanel" aria-labelledby="vert-tabs-settingg-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Evidencias Documentales</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoEvidenciasDocu />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsd" role="tabpanel" aria-labelledby="vert-tabs-settingd-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Enganche</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoEnganche />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsp" role="tabpanel" aria-labelledby="vert-tabs-settingp-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Pagares</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoPagares />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsk" role="tabpanel" aria-labelledby="vert-tabs-settingk-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Pagos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoPagos />
+                    </div>
+                </div>
 
-                    <div class="boder-iv  m-3">
-                        <h3>Requisitos</h3>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <!-- checkbox -->
-                                <div class="form-group clearfix">
-
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Requiere Aval
-                                        </label>
-                                    </div>
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Requiere Enganche
-                                        </label>
-                                    </div>
-
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Modificar Limite de Credito
-                                        </label>
-                                    </div>
-                                    <div class="icheck-primary d-inline">
-                                        <input type="checkbox" id="checkboxPrimary3">
-                                        <label for="checkboxPrimary3">
-                                            Cambiar Producto
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row ">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label>Observaciones</label>
-                                    <input type="text" class="form-control" placeholder="Enter ...">
-                                </div>
-                            </div>
-                        </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsu" role="tabpanel" aria-labelledby="vert-tabs-settingu-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Requisitos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoRequisitios />
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
 
 <div class="row mb-3">
     <a class="btn btn-app bg-info" id="floatSave">
@@ -918,7 +254,7 @@
     protected override async Task OnInitializedAsync()
     {
         vmData.Folio = "509767";
-        vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
+        //vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
         //vmData.Orden.Sucursal = "01";
         //vmData.Orden.NombreSucursal = "Sucursal Centro Veracruz";
         //vmData.Orden.Impreso = false;
