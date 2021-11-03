@@ -4,17 +4,248 @@
 <h3>PSolicitudCreditoPrincipal R1</h3>
 
 
-<PSolicitudCreditoCte modelo="@vmData"/>
-<PSolicitudCreditoCteAdi modelo="@vmData"/>
-<PSolicitudCreditoEmpleo modelo="@vmData" />
-<PSolicitudCreditoRefFamiliares modelo="@vmData"/>
-<PSolicitudCreditoInfoConyu modelo="@vmData"/>
-<PSolicitudCreditoProductos />
-<PSolicitudCreditoEvidenciasDocu />
-<PSolicitudCreditoEnganche />
-<PSolicitudCreditoPagares />
-<PSolicitudCreditoPagos />
-<PSolicitudCreditoRequisitios />
+@*<PSolicitudCreditoCte modelo="@vmData" />*@
+@*<PSolicitudCreditoCteAdi modelo="@vmData" />*@
+@*<PSolicitudCreditoEmpleo modelo="@vmData" />*@
+@*<PSolicitudCreditoRefFamiliares modelo="@vmData" />*@
+@*<PSolicitudCreditoInfoConyu modelo="@vmData" />*@
+@*<PSolicitudCreditoProductos />*@
+@*<PSolicitudCreditoEvidenciasDocu />*@
+@*<PSolicitudCreditoEnganche />*@
+@*<PSolicitudCreditoPagares />*@
+@*<PSolicitudCreditoPagos />*@
+@*<PSolicitudCreditoRequisitios />*@
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="vert-tabs-home-tabt" data-toggle="pill" href="#vert-tabs-homet" role="tab" aria-controls="vert-tabs-homet" aria-selected="false">PSolicitudCreditoPrincipal R1</a>
+            <a class="nav-link" id="vert-tabs-home-tab" data-toggle="pill" href="#vert-tabs-home" role="tab" aria-controls="vert-tabs-home" aria-selected="false">PSolicitudCreditoCte</a>
+            <a class="nav-link" id="vert-tabs-profile-tab" data-toggle="pill" href="#vert-tabs-profile" role="tab" aria-controls="vert-tabs-profile" aria-selected="false">PSolicitudCreditoCteAdi</a>
+            <a class="nav-link" id="vert-tabs-messages-tab" data-toggle="pill" href="#vert-tabs-messages" role="tab" aria-controls="vert-tabs-messages" aria-selected="false">PSolicitudCreditoEmpleo</a>
+            <a class="nav-link" id="vert-tabs-settings-tab" data-toggle="pill" href="#vert-tabs-settings" role="tab" aria-controls="vert-tabs-settings" aria-selected="false">PSolicitudCreditoRefFamiliares</a>
+            <a class="nav-link" id="vert-tabs-settings-tabs" data-toggle="pill" href="#vert-tabs-settingss" role="tab" aria-controls="vert-tabs-settingss" aria-selected="false">PSolicitudCreditoInfoConyu</a>
+            <a class="nav-link" id="vert-tabs-settingx-tabs" data-toggle="pill" href="#vert-tabs-settingsx" role="tab" aria-controls="vert-tabs-settingsx" aria-selected="false">PSolicitudCreditoProductos</a>
+            <a class="nav-link" id="vert-tabs-settingg-tabs" data-toggle="pill" href="#vert-tabs-settingsg" role="tab" aria-controls="vert-tabs-settingsg" aria-selected="false">PSolicitudCreditoEvidenciasDocu</a>
+            <a class="nav-link" id="vert-tabs-settingd-tabs" data-toggle="pill" href="#vert-tabs-settingsd" role="tab" aria-controls="vert-tabs-settingsd" aria-selected="false">PSolicitudCreditoEnganche</a>
+            <a class="nav-link" id="vert-tabs-settingp-tabs" data-toggle="pill" href="#vert-tabs-settingsp" role="tab" aria-controls="vert-tabs-settingsp" aria-selected="false">PSolicitudCreditoPagares</a>
+            <a class="nav-link" id="vert-tabs-settingk-tabs" data-toggle="pill" href="#vert-tabs-settingsk" role="tab" aria-controls="vert-tabs-settingsk" aria-selected="false">PSolicitudCreditoPagos</a>
+            <a class="nav-link" id="vert-tabs-settingu-tabs" data-toggle="pill" href="#vert-tabs-settingsu" role="tab" aria-controls="vert-tabs-settingsu" aria-selected="false">PSolicitudCreditoRequisitios</a>
+        </div>
+    </div>
+    <div class="col-7 col-sm-9">
+        <div class="tab-content" id="vert-tabs-tabContent">
+            <div class="tab-pane text-left fade" id="vert-tabs-homet" role="tabpanel" aria-labelledby="vert-tabs-home-tabt">
+
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Credito</h3>
+                    </div>
+                    <div class="card-body">
+
+
+                        <!--!--><div class="form-group row">
+                            <label for="Folio" class="col-sm-1 col-form-label">Folio</label>
+                            <div class="col-sm-5">
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="Buscar por Folio">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--!--><div class="form-group row">
+                            <label for="Folio" class="col-sm-1 col-form-label">Sucursal</label>
+                            <div class="col-sm-5">
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="Buscar por Folio">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div>
+                            <label for="Folio" class="col-sm-1 col-form-label">Enganche</label>
+                            <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
+                        </div>
+                        <div class="form-group row">
+                            <!--!--><label for="Folio" class="col-sm-1 col-form-label">Plazo</label>
+                            <!--!--><div class="col-sm-2"><div class="input-group "><input type="text" class="form-control"></div></div>
+                            <!--!--><label for="Folio" class="col-sm-2 col-form-label">Forma de Pago</label>
+                            <div class="col-sm-3">
+                                <div class="input-group ">
+                                    <select class="form-control">
+                                        <option>option 1</option><!--!-->
+                                        <option>option 2</option><!--!-->
+                                        <option>option 3</option><!--!-->
+                                        <option>option 4</option><!--!-->
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div><!--!-->
+                            <!--!--><label for="Folio" class="col-sm-1 col-form-label">Grupo</label>
+                            <div class="col-sm-3">
+                                <div class="input-group ">
+                                    <select class="form-control">
+                                        <option>option 1</option><!--!-->
+                                        <option>option 2</option><!--!-->
+                                        <option>option 3</option><!--!-->
+                                        <option>option 4</option><!--!-->
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div><!--!-->
+                        <!--!--><div class="form-group row">
+                            <label for="Folio" class="col-sm-1 col-form-label">Fecha</label>
+                            <div class="col-sm-5"><div class="input-group "><input type="date" class="form-control"></div></div>
+                            <label for="Folio" class="col-sm-1 col-form-label">Vendedor</label>
+                            <div class="col-sm-5">
+                                <div class="input-group ">
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <a class="btn btn-app bg-info">
+                                <i class="fas fa-search"></i>Buscar
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane text-left fade" id="vert-tabs-home" role="tabpanel" aria-labelledby="vert-tabs-home-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Datos de Cliente</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoCte modelo="@vmData" />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vert-tabs-profile" role="tabpanel" aria-labelledby="vert-tabs-profile-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Adiccionales De Cliente</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoCteAdi modelo="@vmData" />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vert-tabs-messages" role="tabpanel" aria-labelledby="vert-tabs-messages-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Información de Empleo</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoEmpleo modelo="@vmData" />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settings" role="tabpanel" aria-labelledby="vert-tabs-settings-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Referencias Familiares</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoRefFamiliares modelo="@vmData" />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingss" role="tabpanel" aria-labelledby="vert-tabs-settingss-tab">
+
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Informacion esposa u oblidado Solidario</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoInfoConyu modelo="@vmData" />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsx" role="tabpanel" aria-labelledby="vert-tabs-settingsx-tab">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Productos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoProductos />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsg" role="tabpanel" aria-labelledby="vert-tabs-settingg-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Evidencias Documentales</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoEvidenciasDocu />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsd" role="tabpanel" aria-labelledby="vert-tabs-settingd-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Enganche</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoEnganche />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsp" role="tabpanel" aria-labelledby="vert-tabs-settingp-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title"> Pagares</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoPagares />
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsk" role="tabpanel" aria-labelledby="vert-tabs-settingk-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Pagos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoPagos />
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade " id="vert-tabs-settingsu" role="tabpanel" aria-labelledby="vert-tabs-settingu-tabs">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Requisitos</h3>
+                    </div>
+                    <div class="card-body">
+                        <PSolicitudCreditoRequisitios />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row mb-3">
+    <a class="btn btn-app bg-info" id="floatSave">
+        <i class="fas fa-save"></i>Guardar
+    </a>
+    <a class="btn btn-app bg-danger" id="floatClose">
+        <i class="fas fa-window-close"></i> Cancelar
+    </a>
+    <a class="btn btn-app bg-warning" id="floatWarning">
+        <i class="fas fa-print"></i>Imprimir
+    </a>
+    <a class="btn btn-app bt-floar-loung" id="floatSalir">
+        <i class="fas fa-sign-out-alt"></i>Salir
+    </a>
+</div>
 @code {
 
     public VMCredito vmData = new VMCredito();
@@ -23,7 +254,7 @@
     protected override async Task OnInitializedAsync()
     {
         vmData.Folio = "509767";
-        vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
+        //vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
         //vmData.Orden.Sucursal = "01";
         //vmData.Orden.NombreSucursal = "Sucursal Centro Veracruz";
         //vmData.Orden.Impreso = false;

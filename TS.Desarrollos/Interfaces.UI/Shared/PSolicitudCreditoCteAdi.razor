@@ -1,6 +1,82 @@
-﻿<h3>PSolicitudCreditoCteAdi R3</h3>
-@using Almacen.Data.VModels
+﻿@using Almacen.Data.VModels
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Entre Calles</label>
+    <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
+    <label for="Folio" class="col-sm-2 col-form-label">Años de residencia</label>
+    <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
+</div>
+<div class="row">
+    <div class="col-sm-4 radio-ctr">
+        <div class="form-group clearfix">
+            <div class="icheck-primary d-inline">
+                <input type="checkbox" id="checkboxPrimary3">
+                <label for="checkboxPrimary3">
+                    Casa propia
+                </label>
+            </div>
+            <div class="icheck-primary d-inline">
+                <input type="checkbox" id="checkboxPrimary3">
+                <label for="checkboxPrimary3">
+                    Casa en Renta
+                </label>
+            </div>
+        </div>
+        <div class="form-group clearfix">
+            <div class="icheck-primary d-inline">
+                <input type="checkbox" id="checkboxPrimary3">
+                <label for="checkboxPrimary3">
+                    Vive con padre
+                </label>
+            </div>
+            <div class="icheck-primary d-inline">
+                <input type="checkbox" id="checkboxPrimary3">
+                <label for="checkboxPrimary3">
+                    Otros
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Teléfono Fijo Casa</label>
+            <label>O recado.</label><small> (No celular)</small>
+            <input type="text" class="form-control" id="">
+        </div>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Renta Mensual</label>
+    <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
+    <label for="Folio" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
+    <div class="col-sm-3"><div class="input-group "><input type="date" class="form-control"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Estado civil</label>
+    <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
+    <label for="Folio" class="col-sm-2 col-form-label">Teléfono Celular</label>
+    <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Dependientes</label>
+    <div class="col-sm-4"><div class="input-group "><input type="text" class="form-control"></div></div>
+</div>
 
+<small>Si el campo "va años de residencia = 0 se debera capturar los siguientes campos"</small>
+
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Domicilio Anterior </label>
+    <div class="col-sm-8"><div class="input-group "><input type="text" class="form-control"></div></div>
+
+</div><div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Ciudad</label>
+    <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
+    <label for="Folio" class="col-sm-2 col-form-label">Estado</label>
+    <div class="col-sm-3"><div class="input-group "><input type="tel" class="form-control"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-2 col-form-label">Años de Residencia</label>
+    <div class="col-sm-5"><div class="input-group "><input type="text" class="form-control"></div></div>
+</div>
 @code {
     [Parameter]
     public VMCredito modelo { get; set; }

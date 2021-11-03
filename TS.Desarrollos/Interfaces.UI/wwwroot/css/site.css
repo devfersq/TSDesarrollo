@@ -65,7 +65,7 @@ a, .btn-link {
 }
 
 .button-control {
-margin-right: 18px;
+    margin-right: 18px;
 }
 
 
@@ -77,7 +77,7 @@ margin-right: 18px;
 .text-01 {
     float: right;
     margin-top: 21px;
-    display:block;
+    display: block;
 }
 
 .bg-warning, .bg-warning > a {
@@ -85,8 +85,9 @@ margin-right: 18px;
 }
 
 .add-producto {
-float:right;
+    float: right;
 }
+
 .control-center {
     width: 100%;
     display: flex;
@@ -96,7 +97,7 @@ float:right;
     align-items: center;
 }
 
-.check-aling{
+.check-aling {
     margin-top: 14px;
     display: block;
 }
@@ -178,11 +179,20 @@ float:right;
 
 .my-custom-scrollbar {
     position: relative;
-    width:auto;
+    width: auto;
     height: 500px;
     overflow: auto;
 }
 
 .table-wrapper-scroll-y {
     display: block;
+}
+
+
+
+.boder-iv {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0d0d0;
+    padding: 10px;
 }
