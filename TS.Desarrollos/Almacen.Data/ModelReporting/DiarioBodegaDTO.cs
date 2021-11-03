@@ -17,6 +17,7 @@ namespace Almacen.Data.ModelReporting
 
     public class DiarioBodegaDetail
     {
+        public string Tipo { get; set; }
         public string Sucursal { get; set; }
         public string Orden { get; set; }
     }

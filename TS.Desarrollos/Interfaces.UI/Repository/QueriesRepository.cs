@@ -69,6 +69,26 @@ namespace Interfaces.UI.Repository
             { }
             return await Task.FromResult(dto);
         }
+        public async Task<OrdenEntregaDTO> GetOrdenEntregaInfo(int folio, string tipo, int sucursal)
+        {
+            var dto = new OrdenEntregaDTO();
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter() { ParameterName = "folio", SqlDbType = SqlDbType.BigInt, Value = folio },
+                new SqlParameter() { ParameterName = "tipo", SqlDbType = SqlDbType.VarChar, Value = tipo },
+                new SqlParameter() { ParameterName = "sucursal", SqlDbType = SqlDbType.Int, Value = sucursal }
+                };
+                var jsonDsets = _context.QueryMultipleResults(sql: "dbo.spRepFormatoOrdenEntrega").ExecuteMultipleJsonResults(parameters, typeof(OrdenEntregaHeader), typeof(OrdenEntregaSubsidiary), typeof(OrdenEntregaCustomer), typeof(OrdenEntregaDetail));
+                dto.Header = JsonConvert.DeserializeObject<List<OrdenEntregaHeader>>(jsonDsets[0]);
+                dto.Subsidiary = JsonConvert.DeserializeObject<List<OrdenEntregaSubsidiary>>(jsonDsets[1]);
+                dto.Customer = JsonConvert.DeserializeObject<List<OrdenEntregaCustomer>>(jsonDsets[2]);
+                dto.Details = JsonConvert.DeserializeObject<List<OrdenEntregaDetail>>(jsonDsets[3]);
+            }
+            catch (Exception ex)
+            { }
+            return await Task.FromResult(dto);
+        }
         public async Task<OrdenMovimientoDTO> GetOrdenMovimientoInfo(int folio, string tipo, int sucursal)
         {
             var dto = new OrdenMovimientoDTO();
@@ -84,6 +104,24 @@ namespace Interfaces.UI.Repository
                 dto.Details = JsonConvert.DeserializeObject<List<OrdenMovimientoDetail>>(jsonDsets[1]);
             }
             catch(Exception ex)
+            { }
+            return await Task.FromResult(dto);
+        }
+        public async Task<OrdenDevolucionDTO> GetOrdenDevolucionInfo(int folio, string tipo, int sucursal)
+        {
+            var dto = new OrdenDevolucionDTO();
+            try
+            {
+                SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter() { ParameterName = "folio", SqlDbType = SqlDbType.BigInt, Value = folio },
+                new SqlParameter() { ParameterName = "tipo", SqlDbType = SqlDbType.VarChar, Value = tipo },
+                new SqlParameter() { ParameterName = "sucursal", SqlDbType = SqlDbType.Int, Value = sucursal }
+                };
+                var jsonDsets = _context.QueryMultipleResults(sql: "dbo.spRepFormatoOrdenMovimiento").ExecuteMultipleJsonResults(parameters, typeof(OrdenDevolucionHeader), typeof(OrdenDevolucionDetail));
+                dto.Header = JsonConvert.DeserializeObject<List<OrdenDevolucionHeader>>(jsonDsets[0]);
+                dto.Details = JsonConvert.DeserializeObject<List<OrdenDevolucionDetail>>(jsonDsets[1]);
+            }
+            catch (Exception ex)
             { }
             return await Task.FromResult(dto);
         }

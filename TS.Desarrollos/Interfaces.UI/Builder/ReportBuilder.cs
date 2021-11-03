@@ -3,6 +3,11 @@ using Interfaces.UI.Repository;
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.IO;
+using System.Collections.Generic;
+using Almacen.Data.ModelReporting;
+using System.Linq;
 
 namespace Interfaces.UI.Builder
 {
@@ -55,6 +60,7 @@ namespace Interfaces.UI.Builder
 
         internal async Task<ReportResult> Build()
         {
+            //AspNetCore.Report.ReportViewer report = new AspNetCore.Report.ReportViewer();
             LocalReport localReport = new LocalReport(GetUrlReport());
             await BindData(localReport);
             return localReport.Execute((RenderType)RenderTypeId, extension, null, mimtype);
@@ -108,8 +114,16 @@ namespace Interfaces.UI.Builder
                     await GetCobranzaBodegaData(localReport);
                     break;
 
+                case 4:
+                    await GetOrdenEntregaData(localReport);
+                    break;
+
                 case 5:
                     await GetOrdenMovimientoData(localReport);
+                    break;
+
+                case 6:
+                    await GetOrdenDevolucionData(localReport);
                     break;
             }
         }
@@ -131,12 +145,37 @@ namespace Interfaces.UI.Builder
             localReport.AddDataSource("Header", data.Header);
             localReport.AddDataSource("Details", data.Details);
         }
-
+        private async Task GetOrdenEntregaData(LocalReport localReport)
+        {
+            var data = await _queriesRepo.GetOrdenEntregaInfo(Convert.ToInt32(Folio), Tipo, Convert.ToInt32(Sucursal));
+            var urlImage = $"{_webHostEnvironment.WebRootPath}\\Images\\{data.Header.First().LogoEmpresa}";
+            Image img = Image.FromFile(urlImage);
+            var imagesList = new List<OrdenEntregaImages>() { new OrdenEntregaImages { LogoEmpresa = ImageToByteArray(img) } };
+            localReport.AddDataSource("Header", data.Header);
+            localReport.AddDataSource("Subsidiary", data.Subsidiary);
+            localReport.AddDataSource("Customer", data.Customer);
+            localReport.AddDataSource("Details", data.Details);
+            localReport.AddDataSource("Images", imagesList);
+        }
         private async Task GetOrdenMovimientoData(LocalReport localReport)
         {
             var data = await _queriesRepo.GetOrdenMovimientoInfo(Convert.ToInt32(Folio), Tipo, Convert.ToInt32(Sucursal));
             localReport.AddDataSource("Header", data.Header);
             localReport.AddDataSource("Details", data.Details);
+        }
+        private async Task GetOrdenDevolucionData(LocalReport localReport)
+        {
+            var data = await _queriesRepo.GetOrdenDevolucionInfo(Convert.ToInt32(Folio), Tipo, Convert.ToInt32(Sucursal));
+            localReport.AddDataSource("Header", data.Header);
+            localReport.AddDataSource("Details", data.Details);
+        }
+        public byte[] ImageToByteArray(Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
         }
         #endregion
     }
