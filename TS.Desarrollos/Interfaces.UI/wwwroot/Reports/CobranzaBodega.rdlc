@@ -290,7 +290,15 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <TopBorder>
+                              <Style>Solid</Style>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>Solid</Style>
+                            </LeftBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -320,7 +328,21 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
-                            <BackgroundColor>LightGrey</BackgroundColor>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -564,7 +586,7 @@
             <DataSetName>Details</DataSetName>
             <Top>0.28787cm</Top>
             <Height>2.4cm</Height>
-            <Width>10.22209cm</Width>
+            <Width>10.22208cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -625,9 +647,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
             <Top>5.91848cm</Top>
-            <Left>11.06827cm</Left>
+            <Left>10.07344cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.548cm</Width>
+            <Width>6.16183cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -653,9 +675,9 @@
           </Line>
           <Line Name="Line2">
             <Top>5.8832cm</Top>
-            <Left>10.60261cm</Left>
+            <Left>9.69244cm</Left>
             <Height>0cm</Height>
-            <Width>6.54283cm</Width>
+            <Width>6.818cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
