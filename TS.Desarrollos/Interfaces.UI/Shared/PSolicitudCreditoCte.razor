@@ -1,52 +1,58 @@
 ﻿@*<h3>PSolicitudCreditoCte R2</h3>*@
 @using Almacen.Data.VModels
- 
+
 
 @*<input type="text" @bind="modelo.ClienteNombre" />*@
 
- 
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Cliente</label>
-        <div class="col-sm-5">
-            <div class="input-group ">
-                <input type="text" class="form-control" placeholder="Buscar por Folio">
-                <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
-            </div>
+
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Cliente</label>
+    <div class="col-sm-5">
+        <div class="input-group ">
+            <input type="text" class="form-control" placeholder="Buscar por Folio" @bind="vmData.Folio">
+            <span class="input-group-append"><button type="button" class="btn btn-info btn-flat"><i class="fa fa-search"></i></button></span>
         </div>
     </div>
+</div>
 
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Nombre</label>
-        <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control"  @bind="modelo.ClienteNombre" ></div></div>
-        <label for="Folio" class="col-sm-1 col-form-label">RFC</label>
-        <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-    </div>
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Dirección</label>
-        <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control"></div></div>
-        <label for="Folio" class="col-sm-1 col-form-label">No .Ext</label>
-        <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-    </div>
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Colonia</label>
-        <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control"></div></div>
-        <label for="Folio" class="col-sm-1 col-form-label">C.P</label>
-        <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-    </div>
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Ciudad</label>
-        <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control"></div></div>
-        <label for="Folio" class="col-sm-1 col-form-label">Estado</label>
-        <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-    </div>
-    <div class="form-group row">
-        <label for="Folio" class="col-sm-1 col-form-label">Teléfono</label>
-        <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control"></div></div>
-        <label for="Folio" class="col-sm-1 col-form-label">Correo</label>
-        <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control"></div></div>
-    </div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Nombre</label>
+    <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteNombre"></div></div>
+    <label for="Folio" class="col-sm-1 col-form-label">RFC</label>
+    <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteRfc"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Dirección</label>
+    <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteDireccion"></div></div>
+    <label for="Folio" class="col-sm-1 col-form-label">No .Ext</label>
+    <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteNoExt"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Colonia</label>
+    <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteColonia"></div></div>
+    <label for="Folio" class="col-sm-1 col-form-label">C.P</label>
+    <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteCP"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Ciudad</label>
+    <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteCiudad"></div></div>
+    <label for="Folio" class="col-sm-1 col-form-label">Estado</label>
+    <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteEstado"></div></div>
+</div>
+<div class="form-group row">
+    <label for="Folio" class="col-sm-1 col-form-label">Teléfono</label>
+    <div class="col-sm-7"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteTelefono"></div></div>
+    <label for="Folio" class="col-sm-1 col-form-label">Correo</label>
+    <div class="col-sm-3"><div class="input-group "><input type="text" class="form-control" @bind="vmData.ClienteCorreoE"></div></div>
+</div>
 @code {
-    [Parameter]
-    public VMCredito modelo { get; set; }
 
+    public VMCredito vmData = new VMCredito();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        vmData.Folio = "509767";
+        vmData.ClienteNombre = "JUAN DIEGO PEREZ DE LOS SANTOS";
+    }
 }
